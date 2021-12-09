@@ -102,9 +102,6 @@ class Webcam extends StreamlitComponentBase<State> {
     if (requestState === WebcamRequestState.SUCCESS) {
       return (
         <div>
-          <button onClick={this.captureFrame} disabled={this.props.disabled || this.state.imageCapture == null}>
-            Capture Frame
-          </button>
           <video ref={this.assignMediaStream} height={500}/>
         </div>
       )
